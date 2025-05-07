@@ -59,6 +59,12 @@ Método	Endpoint	Descripción
 POST	/vote/	Emitir voto
 GET	/vote/getVotes	Ver todos los votos
 GET	/vote/getStatistics	Estadísticas electorales
+
+![image](https://github.com/user-attachments/assets/5fab4221-78b3-4509-b320-18eb58df417a)
+![image](https://github.com/user-attachments/assets/adf8c858-2106-4c29-b974-d95c6693e151)
+![image](https://github.com/user-attachments/assets/7b87ad07-3df2-4d1a-82a1-51dcb9dd1e50)
+
+
 Ejemplo voto:
 
 json
@@ -69,7 +75,11 @@ json
 Proceso de Votación
 
  Estadísticas
-Estadísticas Electorales
+
+ ![image](https://github.com/user-attachments/assets/5d741b03-3bcc-46a4-996b-ab2441fc4869)
+
+![image](https://github.com/user-attachments/assets/b314e062-887d-448b-9370-e5c4b02cee0d)
+
 
 Tecnologías Utilizadas
 Node.js
