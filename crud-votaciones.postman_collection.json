@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "356baf87-326c-45ca-8890-a68404b6e64f",
+		"name": "crud-votaciones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29363934"
+	},
+	"item": [
+		{
+			"name": "candidatos",
+			"item": [
+				{
+					"name": "http://localhost:3000/candidates/insert",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"miku hana\",\n  \"cc\": \"1234567\",\n  \"party\": \"rock pop\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/candidates/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"candidates",
+								"insert"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/candidates/getAll",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/candidates/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"candidates",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/candidates/getByid?id=681a7df014b24c2379ad79c6",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/candidates/getByid?id=681bac54b9a4f008bc8e94e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"candidates",
+								"getByid"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "681bac54b9a4f008bc8e94e2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/candidates/deleteByid?id=681a7df014b24c2379ad79c6",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/candidates/deleteByid?id=681a7df014b24c2379ad79c6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"candidates",
+								"deleteByid"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "681a7df014b24c2379ad79c6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Votantes",
+			"item": [
+				{
+					"name": "http://localhost:3000/voters/insert",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Luisa fernanda Valencia\",\n  \"cc\": \"1000548321\",\n  \"email\": \"LuisaV@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/voters/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"voters",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/voters/getAll",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/voters/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"voters",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/voters/getById?id=681a77b8675e8849128fb95c",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/voters/getById?id=681bacccb9a4f008bc8e94ec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"voters",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "681bacccb9a4f008bc8e94ec"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/voters/deleteById?id=681a77b8675e8849128fb95c",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/voters/deleteById?id=681a77b8675e8849128fb95c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"voters",
+								"deleteById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "681a77b8675e8849128fb95c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "votos",
+			"item": [
+				{
+					"name": "http://localhost:3000/vote/",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"voter_id\": \"681bad29b9a4f008bc8e94f2\",\n    \"candidate_id\":\"681bac71b9a4f008bc8e94e5\"\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/vote/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/vote/getVotes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/vote/getVotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								"getVotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/vote/getStatistics",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/vote/getStatistics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								"getStatistics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
