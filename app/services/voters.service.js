@@ -6,35 +6,51 @@ const {
 } = require("../repository/voters.repository");
 
 const insertVoterService = async (voter) => {
-  const newVoter = await insertVoterRepository(voter);
-  return {
-    message: "voter created successfully",
-    voter: newVoter,
-  };
+  try {
+    const newVoter = await insertVoterRepository(voter);
+    return {
+      message: "voter created successfully",
+      voter: newVoter,
+    };
+  } catch (error) {
+    throw new Error("there was an error registering the voter");
+  }
 };
 
 const getAllVotersService = async () => {
-  const voters = await getAllVotersRepository();
-  return {
-    message: "voters list",
-    data: voters,
-  };
+  try {
+    const voters = await getAllVotersRepository();
+    return {
+      message: "voters list",
+      data: voters,
+    };
+  } catch (error) {
+    throw new Error("there was an error getting the voters");
+  }
 };
 
 const getVoterService = async (id) => {
-  const voter = await getVoterRepository(id);
-  return {
-    message: "voter data",
-    data: voter,
-  };
+  try {
+    const voter = await getVoterRepository(id);
+    return {
+      message: "voter data",
+      data: voter,
+    };
+  } catch (error) {
+    throw new Error("there was an error getting the voter");
+  }
 };
 
 const deleteVoterService = async (id) => {
+  try {
     await deleteVoterRepository(id);
     return {
       message: "voter deleted",
     };
-  };
+  } catch (error) {
+    throw new Error("there was an error deleting the voter");
+  }
+};
 
 module.exports = {
   insertVoterService,

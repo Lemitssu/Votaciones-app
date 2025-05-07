@@ -15,9 +15,14 @@ const deleteVoterRepository = async (id) => {
     return await Voter.findByIdAndDelete(id);
   };
 
+  const updateVoteStatusRepository = async (id) => {
+    return await Voter.findByIdAndUpdate(id, {has_voted: true});
+  };
+
 module.exports = {
   insertVoterRepository,
   getAllVotersRepository,
   getVoterRepository,
-  deleteVoterRepository
+  deleteVoterRepository,
+  updateVoteStatusRepository,
 };

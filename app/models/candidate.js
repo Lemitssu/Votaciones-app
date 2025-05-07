@@ -7,6 +7,11 @@ const candidateSchema = new Schema(
       type: String,
       required: true,
     },
+    cc: {
+      type: String,
+      required: true,
+      unique:true
+    },
     party: {
       type: String,
       default: null,

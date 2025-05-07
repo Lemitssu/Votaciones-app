@@ -7,6 +7,11 @@ const voterSchema = new Schema(
       type: String,
       required: true,
     },
+    cc: {
+      type: String,
+      required: true,
+      unique:true
+    },
     email: {
       type: String,
       required: true,
