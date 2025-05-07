@@ -51,7 +51,7 @@ const insertCandidateController = async (req, res) => {
       cc,
     });
     if (isDataValid) {
-    const result = await insertCandidateService(req.body);
+    const result = await insertCandidateService({ name, party, cc });
     res.status(HTTP_STATUS.CREATED).json({
       success: true,
       data: result.candidate,
